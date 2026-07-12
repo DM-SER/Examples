@@ -1,0 +1,22 @@
+<div class="filter-list">
+  <input type="text" placeholder="Search" (input)="onSearch($event)" />
+  <select class="filter-list-item" name="status" (change)="onFilterForStatus($event)">
+    <option value="">Все статусы</option>
+    @for (status of status; track $index) {
+      <option value="{{ status }}">{{ status }}</option>
+    }
+  </select>
+
+  <select class="filter-list-item" name="roleAccess" (change)="onFilterForRoleAccess($event)">
+    <option value="">Все роли</option>
+    @for (roleAccess of roleAccess; track $index) {
+      <option value="{{ roleAccess }}">{{ roleAccess }}</option>
+    }
+  </select>
+
+  <select class="filter-list-item" name="sort-by-name" (change)="onSort($event)">
+    @for (sortBy of sortBy; track $index) {
+      <option value="{{ sortBy }}">{{ sortBy }}</option>
+    }
+  </select>
+</div>

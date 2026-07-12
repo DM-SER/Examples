@@ -1,0 +1,41 @@
+:host {
+  width: calc(100vw - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  color: black;
+  font-size: 12px;
+  padding: 8px;
+
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 255, 0.5);
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.filter-users-block,
+.users-list,
+.pagiante {
+  width: 100%;
+}

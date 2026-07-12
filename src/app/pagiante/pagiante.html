@@ -1,0 +1,20 @@
+<div class="pagination">
+  <button type="button" [disabled]="currentPage() === 1" (click)="prevPage()">←</button>
+
+  @for (page of pages(); track page) {
+    <button
+      type="button"
+      class="pagination-page"
+      [class.active]="page === currentPage()"
+      (click)="goToPage(page)"
+    >
+      {{ page }}
+    </button>
+  }
+
+  <button type="button" [disabled]="currentPage() === totalPages()" (click)="nextPage()">→</button>
+</div>
+
+<p class="pagination-info">
+  Страница {{ currentPage() }} из {{ totalPages() }} (найдено: {{ totalCount() }})
+</p>

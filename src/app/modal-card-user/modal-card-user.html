@@ -1,0 +1,31 @@
+<div class="modal-overlay" (click)="close()">
+  <div class="window-user" role="dialog" aria-modal="true" (click)="$event.stopPropagation()">
+    <div class="window-user-header">
+      <h2>{{ userInfo()?.name }}</h2>
+      <button type="button" class="close-button" aria-label="Закрыть" (click)="close()">×</button>
+    </div>
+
+    <div class="window-user-body">
+      <div class="window-user-body-item">
+        <span class="label">Status</span>
+        <span class="value">{{ userInfo()?.status }}</span>
+      </div>
+      <div class="window-user-body-item">
+        <span class="label">Role</span>
+        <span class="value">{{ userInfo()?.roleAccess }}</span>
+      </div>
+      <div class="window-user-body-item">
+        <span class="label">Email</span>
+        <span class="value">{{ userInfo()?.email }}</span>
+      </div>
+      <div class="window-user-body-item">
+        <span class="label">Phone</span>
+        <span class="value">{{ userInfo()?.phone }}</span>
+      </div>
+      <div class="window-user-body-item">
+        <span class="label">Company</span>
+        <span class="value">{{ userInfo()?.company?.name }}</span>
+      </div>
+    </div>
+  </div>
+</div>
